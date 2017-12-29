@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Nextjs</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			.gif-container h2, .gif-container p {
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="images/nextjs.jpg" alt="nextjs" />
+				</section>
+				<section>
+					<h2>What is it?</h2>
+					<p>Framework for server-rendered or statically-exported React apps</p>
+				</section>
+				<section>
+					<section>
+						<h2>Features</h2>
+						<ul>
+							<li>Universal Javascript</li>
+							<li>Automatic Code Splitting</li>
+							<li>Built-in CSS in JS</li>
+							<li>Routing</li>
+							<li>Dynamic Imports</li>
+							<li>Quick setup and ready for production</li>
+						</ul>
+					</section>
+					<section class="gif-container" data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>Universal Javascript</h2>
+						<p>Run the same code in the backend and in the frontend!!</p>
+						<p style="font-size: 12px">*SEO friendly</p>
+					</section>
+					<section>
+						<h2>Automatic Code Splitting</h2>
+						<p>Every import you declare gets bundled and served with each page. That means pages never load unnecessary code!</p>
+					</section>
+					<section>
+						<h2>Built-in CSS in JS</h2>
+						<p>Uses `styled-jsx` to isolate scope</p>
+						<img src="images/scoped.png" alt="scoped-css" />
+					</section>
+					<section>
+						<h2>Routing</h2>
+						<p>Client-side transitions between routes can be enabled via a `Link` component</p>
+						<img src="images/routing.png" alt="routing" />
+					</section>
+					<section>
+						<h2>Dynamic Imports</h2>
+						<img src="images/dynamic.png" alt="dynamic" />
+					</section>
+				</section>
+				<section>
+					<h2>Quick setup and Ready for production</h2>
+					<img src="images/setup.png" alt="setup" />
+				</section>
+				<section>
+					<h2>Folder structure is the API</h2>
+					<a href="https://github.com/zeit/next.js/tree/canary/examples/basic-css" target="_blank">Basic Structure</a>
+				</section>
+				<section>
+					<h2>Demo!</h2>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://github.com/zeit/next.js/">Next.js github and documentation</a></li>
+						<li><a href="https://github.com/zeit/next.js/tree/canary/examples">Next.js examples</a></li>
+						<li><a href="https://learnnextjs.com/">Small Crash course for Next.js</a></li>
+						<li><a href="https://www.gatsbyjs.org/">Gatsby</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+				]
+			});
+		</script>
+	</body>
+</html>
