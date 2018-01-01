@@ -1,0 +1,131 @@
+Page: https://davidseik.github.io/preso-nextjs/
+
+Snippets:
+
+index.js
+
+import Header from '../components/Header';
+
+export default () => (
+	<div>
+		<Header />
+		<h1>Hello World</h1>
+	</div>
+);
+
+about.js
+import Header from '../components/Header';
+import Button from '../components/Button';
+
+export default () => (
+	<div>
+		<Header />
+		<Button>
+			Hello World
+		</Button>
+	</div>
+);
+
+Header.js
+
+export default () => (
+	<header>
+		<nav>
+			<h1>Navigation</h1>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Social Innovation</a></li>
+			</ul>
+		</nav>
+	</header>
+)
+
+Button.js
+
+export default (props) => {
+	const { children, ...rest } = props;
+	return (
+		<button {...rest}>
+			{children}
+		</button>
+	);
+}
+
+
+Header.js
+
+export default (props) => (
+	<header>
+		<nav>
+			<h1>Navigation</h1>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Social Innovation</a></li>
+			</ul>
+		</nav>
+		<style jsx>{`
+			h1 {
+				color: red;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+			li {
+				display: inline-block;
+				margin-left: 5px;
+			}
+			a {
+				color: ${props.color || 'blue'}
+			}
+		`}</style>
+	</header>
+)
+
+Header.js
+
+import Link from 'next/link';
+
+export default (props) => (
+	<header>
+		<nav>
+			<h1>Navigation</h1>
+			<ul>
+				<li>
+					<Link href="/">
+						<a>Home</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/about">
+						<a>About</a>
+					</Link>
+				</li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Social Innovation</a></li>
+			</ul>
+		</nav>
+		<style jsx>{`
+			h1 {
+				color: red;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+			li {
+				display: inline-block;
+				margin-left: 5px;
+			}
+			a {
+				color: ${props.color || 'blue'}
+			}
+		`}</style>
+	</header>
+);
+
+
